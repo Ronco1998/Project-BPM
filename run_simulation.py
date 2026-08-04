@@ -34,7 +34,7 @@ from engine.configs import available_configs, get_config
 # Available policies: map policy name -> (module_path, class_name)
 # Add your own policy by creating a .py file in policies/ and adding an entry here.
 AVAILABLE_POLICIES = {
-    "my_policy": ("policies.policy_Jorden_Tom_Arik", "Submission"),
+    "my_policy": ("policies.my_policy", "Submission"),
     "fifo": ("policies.fifo_baseline", "FIFOPolicy"),
     "random": ("policies.random_baseline", "RandomPolicy"),
 }
