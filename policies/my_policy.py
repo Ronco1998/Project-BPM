@@ -21,10 +21,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from interface import DoctorQueuePolicy, HospitalState
 
 
-# Group metadata: update with your group's information.
+# Group metadata: updated values with our group's information
 GROUP_INFO = {
-    "group_id": "group_X",
-    "group_members": ["Jorden", "Tom", "Arik"],
+    "group_id": "group_A",
+    "group_members": ["Anat Levin", "Roni Cohen", "Raissa Chut Steinberg", "Atara Keynan"],
 }
 
 
