@@ -291,11 +291,11 @@ if __name__ == "__main__":
 
     # Set to a directory path (e.g. "logs") to write one CSV event log per
     # simulated shift there. Set to None to skip log export entirely.
-    OUTPUT_DIR = None
+    OUTPUT_DIR = "logs"
 
     # Number of parallel worker processes. Set to 1 to disable parallelism
     # (useful for debugging -- easier to read tracebacks from a single
     # process). Will be capped to the number of available CPUs.
-    N_WORKERS = 4
+    N_WORKERS = 1
 
     main(POLICY_NAME, RUNS, OUTPUT_DIR, N_WORKERS, base_seed=67)
