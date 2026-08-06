@@ -98,10 +98,11 @@ def _sample_params(trial):
     return {
         "tau_base": trial.suggest_float("tau_base", 25.0, 45.0),
         "tau_penalty": trial.suggest_float("tau_penalty", 0.0, 15.0),
-        "beta": trial.suggest_float("beta", 0.01, 0.3),
-        "alpha_1": trial.suggest_float("alpha_1", 1e-4, 5e-2, log=True),
-        "alpha_2": trial.suggest_float("alpha_2", 1e-4, 5e-2, log=True),
-        "gamma": trial.suggest_float("gamma", 0.0, 2.0),
+        "beta": trial.suggest_float("beta", 0.02, 0.25),
+        "alpha_1": trial.suggest_float("alpha_1", 1e-3, 5e-2, log=True),
+        "alpha_2": trial.suggest_float("alpha_2", 1e-4, 1e-2, log=True),
+        "delta_slow": trial.suggest_float("delta_slow", 0.0, 1.0),
+        "kappa": trial.suggest_float("kappa", 0.0, 1.0),
     }
 
 
@@ -143,7 +144,7 @@ def main():
     print("=" * 60)
     print("\nPaste into DEFAULT_PARAMS in policies/my_policy.py:\n")
     print("DEFAULT_PARAMS = {")
-    for key in ("tau_base", "tau_penalty", "beta", "alpha_1", "alpha_2", "gamma"):
+    for key in ("tau_base", "tau_penalty", "beta", "alpha_1", "alpha_2", "delta_slow", "kappa"):
         print(f'    "{key}": {best.params[key]:.6g},')
     print("}")
 
